@@ -614,19 +614,21 @@ section {
     }
 }
 
-/* Hamburger Menu (Mobile) */
+/* Hide the default checkbox */
 .menu-toggle {
     display: none;
 }
 
+/* Style the hamburger icon */
 .hamburger {
     display: none;
     font-size: 2rem;
+    color: #fff;
     cursor: pointer;
-    color: #f5f5f5;
+    padding: 10px;
 }
 
-/* Show hamburger and hide nav on small screens */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -635,23 +637,24 @@ section {
     .nav-links {
         display: none;
         flex-direction: column;
-        gap: 20px;
         position: absolute;
-        top: 100%;
-        right: 0;
+        top: 70px;
+        /* below header */
+        left: 0;
         width: 100%;
-        background-color: #1c1c24;
-        padding: 20px 0;
+        background: #1c1c24;
+        padding: 20px;
         z-index: 999;
-        align-items: center;
         text-align: center;
     }
 
+    /* Show nav when checkbox is checked */
     .menu-toggle:checked+.hamburger+.nav-links {
         display: flex;
     }
 
     .nav-links a {
-        margin: 10px 0;
+        padding: 10px 0;
+        color: #fff;
     }
 }
