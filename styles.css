@@ -613,3 +613,45 @@ section {
         margin-bottom: 30px;
     }
 }
+
+/* Hamburger Menu (Mobile) */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #f5f5f5;
+}
+
+/* Show hamburger and hide nav on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #1c1c24;
+        padding: 20px 0;
+        z-index: 999;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-toggle:checked+.hamburger+.nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+}
