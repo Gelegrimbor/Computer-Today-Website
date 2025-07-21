@@ -545,3 +545,71 @@ section {
 #contact {
     scroll-margin-top: 100px;
 }
+
+@media (max-width: 768px) {
+
+    /* Header */
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        margin: 0;
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 90%;
+    }
+
+    /* Services */
+    .service-grid {
+        grid-template-columns: 1fr;
+        /* single column */
+    }
+
+    /* Contact Section */
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+    }
+}
